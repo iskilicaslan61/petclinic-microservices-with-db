@@ -18,7 +18,7 @@ resource "aws_instance" "tf-jenkins-server" {
   vpc_security_group_ids = [aws_security_group.tf-jenkins-sec-gr.id]
   iam_instance_profile = aws_iam_instance_profile.tf-jenkins-server-profile.name
   root_block_device {
-    volume_size = 16
+    volume_size = 20
   }
   tags = {
     Name = var.jenkins-server-tag
